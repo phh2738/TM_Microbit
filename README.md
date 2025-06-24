@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>tm_total model mcu</title>
    <style>
-<!-- CSS 스타일 정의 시작 -->
     body {
         font-family: 'Roboto', sans-serif;
         background-color: #f4f4f9;
@@ -105,21 +104,13 @@
         margin-top: 5px;
     }
 </style>
-<!-- CSS 스타일 정의 종료 -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-<!-- 외부 스크립트 파일 포함 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-<!-- 외부 스크립트 파일 포함 -->
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-<!-- 외부 스크립트 파일 포함 -->
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
-<!-- 외부 스크립트 파일 포함 -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
-<!-- 외부 스크립트 파일 포함 -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-<!-- 외부 스크립트 파일 포함 -->
     <script>
-<!-- 내부 JavaScript 코드 시작 -->
         function tabMenuClick(index) {
         
         var menuidx = index;
@@ -182,32 +173,31 @@
         
         
     </script>
-<!-- 내부 JavaScript 코드 종료 -->
 </head>
-<!-- head 영역 종료 -->
 
  
+
 <body>
     <div class="title-head" width="872" align="center">
-        <h1> 피지컬 컴퓨팅과 인공지능  </h1>
+        <h1> 서울시교육청 융합과학교육원  AI 프로젝트 </h1>
      </div>
     <input type="hidden" id="modelType">
     <div class="container">
         <ul class="list">
-          <li class="tab-button" id="tab01"><a href="javascript:tabMenuClick(1);">Micro:bit webSerial Test</a></li>
-          <li class="tab-button" id="tab02"><a href="javascript:tabMenuClick(2);">Teachable Machine Image Model</a></li>
-          <li class="tab-button" id="tab03"><a href="javascript:tabMenuClick(3);">Teachable Machine Pose Model</a></li>
-          <li class="tab-button" id="tab04"><a href="javascript:tabMenuClick(4);">Teachable Machine Voice Model</a></li>    
+          <li class="tab-button" id="tab01"><a href="javascript:tabMenuClick(1);">Serial Test</a></li>
+          <li class="tab-button" id="tab02"><a href="javascript:tabMenuClick(2);">TM Image Model for MCU</a></li>
+          <li class="tab-button" id="tab03"><a href="javascript:tabMenuClick(3);">TM Pose Model for MCU</a></li>
+          <li class="tab-button" id="tab04"><a href="javascript:tabMenuClick(4);">TM Voice Model for MCU(배경소음)</a></li>    
         </ul>
       </div><br>
         <div class="tab-content" id="tabContent01" >
           <table align="center">
             <tr height=350 >
-                <td width=1200>
-                    <h1>Micro:bit USB & webSerial Test</h1>
+                <td width=900>
+                    <h1>Micro:bit USB & webSerial Test page</h1>
                     <h3>1. 연결 설정: <button id="connectButton" onclick="getReader();"><h3>Connect</h3></button></h3>
                 <br>
-                    <h3>2. 전송하려는 메세지 입력: <input type="text" id="editText" placeholder="메시지를 입력하세요." /></h3>
+                    <h3>2. 전송하려는 메세지 입력: <input type="text" id="editText" placeholder="Type your message... on, off, ..." /></h3>
                 <br>
                     <h3>3. 전송: <button id="sendButton" ><h3>Send</h3></button></h3>
                 </td>
@@ -215,10 +205,10 @@
             </table>
         </div>
         <div class="tab-content" id="tabContent02" >
-          <table align="center" >
+          <table  align="center" >
             <tr>
-            <td width=1200>
-                <h1 style="font-size:40px;">Teachable Machine Image Model Test</h1>
+            <td width=900>
+                <h1 style="font-size:40px;">TM Image Model for MCU(Arduino/micro:bit)</h1>
             1.    <label for="model-url-input">Teachable Machine Image Model URL:</label>
                 <input type="text" id="model-url-input-imgae" placeholder="Enter your model URL here" >
                 <button type="button" onclick="setModelUrl('Image')">Set Model URL</button>
@@ -242,6 +232,8 @@
                 <div id="classNameContainer">Current Class: <span id="className-image">None</span></div>
                 <canvas id="canvas-image"></canvas>
                 <br>
+
+ 
 
             Option1. Canvas Size <label for="width-input">Width:</label>
                 <input type="number" id="width-input-image" placeholder="400">
@@ -269,10 +261,10 @@
           </table>
         </div>
         <div class="tab-content" id="tabContent03">
-          <table align="center" >
+            <table align="center">
                 <tr>
-                <td width=1200>
-                    <h1 style="font-size:40px;">Teachable Machine Pose Model Test</h1>
+                <td width=900>
+                    <h1 style="font-size:40px;">TM Pose Model for MCU</h1>
                 1.  <label for="model-url-input">Teachable Machine Pose Model URL:</label>
                     <input type="text" id="model-url-input-pose" placeholder="Enter your model URL here" >
                     <button type="button" onclick="setModelUrl('Pose')">Set Model URL</button>
@@ -321,15 +313,19 @@
                     <button id="disconnectButton" onClick="microBitDCon();">Disconnect</button>
                      <br>
                     <br>
-               </td>
-            </tr>            
-          </table>
+                </td>
+                </tr>
+                <tr>
+
+ 
+
+            </table>    
         </div>
         <div class="tab-content" id="tabContent04">
-          <table align="center" >
+            <table align="center">
                 <tr>
                 <td width=900>
-                <h1 style="font-size:40px;">Teachable Machine Voice Model</h1>
+                <h1 style="font-size:40px;">TM Voice Model for MCU(Arduino/micro:bit)</h1>
                 1.        <label for="url-input">Teachable Machine Voice Model URL: </label>
                           <input type="text" id="model-url-input-voice">
                           <button type="button" onclick="setModelUrl('Voice');">OK</button>
