@@ -1,4 +1,4 @@
-# 강원교육과학정보원 티쳐블 머신과 마이크로비트 실습
+# 강원교육과학정보원 피지컬 컴퓨팅과 인공지능
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -203,7 +203,7 @@
         <div class="tab-content" id="tabContent01" >
           <table align="center">
             <tr height=350 >
-                <td width=900>
+                <td width=1200>
                     <h1>Micro:bit USB & webSerial Test</h1>
                     <h3>1. 연결 설정: <button id="connectButton" onclick="getReader();"><h3>Connect</h3></button></h3>
                 <br>
@@ -217,7 +217,7 @@
         <div class="tab-content" id="tabContent02" >
           <table align="center" >
             <tr>
-            <td width=900>
+            <td width=1200>
                 <h1 style="font-size:40px;">Teachable Machine Image Model Test</h1>
             1.    <label for="model-url-input">Teachable Machine Image Model URL:</label>
                 <input type="text" id="model-url-input-imgae" placeholder="Enter your model URL here" >
@@ -271,7 +271,7 @@
         <div class="tab-content" id="tabContent03">
           <table align="center" >
                 <tr>
-                <td width=900>
+                <td width=1200>
                     <h1 style="font-size:40px;">Teachable Machine Pose Model Test</h1>
                 1.  <label for="model-url-input">Teachable Machine Pose Model URL:</label>
                     <input type="text" id="model-url-input-pose" placeholder="Enter your model URL here" >
@@ -321,11 +321,9 @@
                     <button id="disconnectButton" onClick="microBitDCon();">Disconnect</button>
                      <br>
                     <br>
-                </td>
-                </tr>
-                <tr>
-
-            </table>    
+               </td>
+            </tr>            
+          </table>
         </div>
         <div class="tab-content" id="tabContent04">
           <table align="center" >
