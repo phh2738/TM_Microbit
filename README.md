@@ -215,7 +215,7 @@
             </table>
         </div>
         <div class="tab-content" id="tabContent02" >
-          <table  align="center" >
+          <table align="center" >
             <tr>
             <td width=900>
                 <h1 style="font-size:40px;">Teachable Machine Image Model Test</h1>
@@ -243,8 +243,6 @@
                 <canvas id="canvas-image"></canvas>
                 <br>
 
- 
-
             Option1. Canvas Size <label for="width-input">Width:</label>
                 <input type="number" id="width-input-image" placeholder="400">
                 &nbsp;
@@ -271,7 +269,7 @@
           </table>
         </div>
         <div class="tab-content" id="tabContent03">
-            <table align="center">
+          <table align="center" >
                 <tr>
                 <td width=900>
                     <h1 style="font-size:40px;">Teachable Machine Pose Model Test</h1>
@@ -327,12 +325,10 @@
                 </tr>
                 <tr>
 
- 
-
             </table>    
         </div>
         <div class="tab-content" id="tabContent04">
-            <table align="center">
+          <table align="center" >
                 <tr>
                 <td width=900>
                 <h1 style="font-size:40px;">Teachable Machine Voice Model</h1>
