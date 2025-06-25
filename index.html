@@ -1,3 +1,4 @@
+# 강원교육과학정보원 여름 교육정보화 연수
 <!doctype html>
 <html>
 <head>
@@ -179,15 +180,15 @@
 
 <body>
     <div class="title-head" width="872" align="center">
-        <h1> 강원교육과학정보원 </h1>
+        <h1> 피지컬 컴퓨팅과 인공지능 </h1>
      </div>
     <input type="hidden" id="modelType">
     <div class="container">
         <ul class="list">
           <li class="tab-button" id="tab01"><a href="javascript:tabMenuClick(1);">Serial Test</a></li>
-          <li class="tab-button" id="tab02"><a href="javascript:tabMenuClick(2);">TM Image Model for MCU</a></li>
-          <li class="tab-button" id="tab03"><a href="javascript:tabMenuClick(3);">TM Pose Model for MCU</a></li>
-          <li class="tab-button" id="tab04"><a href="javascript:tabMenuClick(4);">TM Voice Model for MCU(배경소음)</a></li>    
+          <li class="tab-button" id="tab02"><a href="javascript:tabMenuClick(2);">Teachable Machine Image Model</a></li>
+          <li class="tab-button" id="tab03"><a href="javascript:tabMenuClick(3);">Teachable Machine Pose Model</a></li>
+          <li class="tab-button" id="tab04"><a href="javascript:tabMenuClick(4);">Teachable Machine Voice Model)</a></li>    
         </ul>
       </div><br>
         <div class="tab-content" id="tabContent01" >
@@ -197,7 +198,7 @@
                     <h1>Micro:bit USB & webSerial Test page</h1>
                     <h3>1. 연결 설정: <button id="connectButton" onclick="getReader();"><h3>Connect</h3></button></h3>
                 <br>
-                    <h3>2. 전송하려는 메세지 입력: <input type="text" id="editText" placeholder="Type your message... on, off, ..." /></h3>
+                    <h3>2. 전송하려는 메세지 입력: <input type="text" id="editText" placeholder="메시지를 입력하세요요" /></h3>
                 <br>
                     <h3>3. 전송: <button id="sendButton" ><h3>Send</h3></button></h3>
                 </td>
@@ -208,7 +209,7 @@
           <table  align="center" >
             <tr>
             <td width=900>
-                <h1 style="font-size:40px;">TM Image Model for MCU(Arduino/micro:bit)</h1>
+                <h1 style="font-size:40px;">Teachable Machine Image Model </h1>
             1.    <label for="model-url-input">Teachable Machine Image Model URL:</label>
                 <input type="text" id="model-url-input-imgae" placeholder="Enter your model URL here" >
                 <button type="button" onclick="setModelUrl('Image')">Set Model URL</button>
@@ -264,7 +265,7 @@
             <table align="center">
                 <tr>
                 <td width=900>
-                    <h1 style="font-size:40px;">TM Pose Model for MCU</h1>
+                    <h1 style="font-size:40px;">Teachable Machine Pose Model</h1>
                 1.  <label for="model-url-input">Teachable Machine Pose Model URL:</label>
                     <input type="text" id="model-url-input-pose" placeholder="Enter your model URL here" >
                     <button type="button" onclick="setModelUrl('Pose')">Set Model URL</button>
@@ -325,7 +326,7 @@
             <table align="center">
                 <tr>
                 <td width=900>
-                <h1 style="font-size:40px;">TM Voice Model for MCU(Arduino/micro:bit)</h1>
+                <h1 style="font-size:40px;">Teachable Machine Voice Model</h1>
                 1.        <label for="url-input">Teachable Machine Voice Model URL: </label>
                           <input type="text" id="model-url-input-voice">
                           <button type="button" onclick="setModelUrl('Voice');">OK</button>
